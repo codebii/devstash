@@ -21,11 +21,10 @@ export function getFavoriteCollections(collections: MockCollection[]): MockColle
   return collections.filter((collection) => collection.isFavorite);
 }
 
-// Non-favorite collections ordered by their most recently updated item.
-export function getRecentCollections(
+// Collections ordered by their most recently updated item.
+export function sortCollectionsByActivity(
   collections: MockCollection[],
   items: MockItem[],
-  limit = RECENT_COLLECTIONS_LIMIT,
 ): MockCollection[] {
   const lastActivity = new Map<string, number>();
 
@@ -36,8 +35,17 @@ export function getRecentCollections(
     }
   }
 
-  return collections
-    .filter((collection) => !collection.isFavorite)
-    .sort((a, b) => (lastActivity.get(b.id) ?? 0) - (lastActivity.get(a.id) ?? 0))
-    .slice(0, limit);
+  return [...collections].sort((a, b) => (lastActivity.get(b.id) ?? 0) - (lastActivity.get(a.id) ?? 0));
+}
+
+// Non-favorite collections ordered by their most recently updated item.
+export function getRecentCollections(
+  collections: MockCollection[],
+  items: MockItem[],
+  limit = RECENT_COLLECTIONS_LIMIT,
+): MockCollection[] {
+  return sortCollectionsByActivity(
+    collections.filter((collection) => !collection.isFavorite),
+    items,
+  ).slice(0, limit);
 }

@@ -61,7 +61,8 @@ export const mockUser: MockUser = {
 export const mockStats = {
   items: 151,
   collections: 7,
-  favorites: 18,
+  favoriteItems: 18,
+  favoriteCollections: 2,
 };
 
 export const mockItemTypes: MockItemType[] = [
