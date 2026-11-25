@@ -4,6 +4,15 @@ A developer knowledge hub for snippets, commands, prompts, notes, files, images,
 
 @AGENTS.md
 
+## Context Files
+
+Read the following to get the full context of the project:
+
+- @context/project-overview.md
+- @context/coding-standards.md
+- @context/ai-interaction.md
+- @context/current-feature.md
+
 ## Commands
 
 - `npm run dev` — start the dev server at http://localhost:3000
