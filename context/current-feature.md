@@ -1,18 +1,26 @@
 # Current Feature
 
-<!-- Feature name and short description -->
+Dashboard UI Phase 3: the main content area of `/dashboard` (stats, recent collections, pinned items and recent items), using mock data.
 
 ## Status
 
-<!-- Not Started | In Progress | Completed -->
+In Progress
 
 ## Goals
 
-<!-- Goals and requirements -->
+- Build the main area to the right of the sidebar
+- 4 stats cards at the top: total items, collections, favorite items and favorite collections (not in the screenshot)
+- Recent collections
+- Pinned items
+- 10 most recent items
 
 ## Notes
 
-<!-- Any extra notes -->
+- Phase 3 of 3 for the dashboard UI layout.
+- Match the design screenshots in `context/design-screenshots/dark-mode/` and `context/design-screenshots/light-mode/`.
+- Import data directly from `src/lib/mock-data.js` until the database is set up.
+- Follow the UI/UX rules in `context/project-overview.md`: collection card backgrounds take the colour of the type they hold most of, and item cards get a border coloured by type.
+- Builds on `context/features/dashboard-phase-1-spec.md` and `context/features/dashboard-phase-2-spec.md`.
 
 ## History
 
