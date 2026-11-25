@@ -696,6 +696,13 @@ export function canUsePro(user: { isPro: boolean }) {
 - Syntax highlighting for code blocks
 - Inspiration: [Notion](https://www.notion.so), [Linear](https://linear.app), [Raycast](https://www.raycast.com)
 
+### Screenshots
+
+Refer to the screenshots within the following folders as a reference for the dashboard UI design:
+
+- @context/design-screenshots/light-mode
+- @context/design-screenshots/dark-mode
+
 ### Layout
 
 ```
